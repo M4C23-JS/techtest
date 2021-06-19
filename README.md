@@ -18,7 +18,7 @@ Up server
 npm start
 ```
 
-Open localhost, i using port 9060
+Open localhost, listen in port 9060 
 
 ```
 http://localhost:9060/
