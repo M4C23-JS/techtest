@@ -1,25 +1,33 @@
 {
-  "name": "techtest",
-  "version": "1.0.0",
-  "description": "prueba tecnica",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/M4C23-JS/techtest.git"
-  },
-  "keywords": [
-    "test"
-  ],
-  "author": "macDev",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/M4C23-JS/techtest/issues"
-  },
-  "homepage": "https://github.com/M4C23-JS/techtest#readme",
-  "devDependencies": {
-    "node-sass": "^6.0.0"
-  }
+	"name": "techtest",
+	"version": "1.0.0",
+	"description": "prueba tecnica",
+	"main": "src/sass/mystyles.scss",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"css-build": "node-sass --omit-source-map-url src/sass/mystyles.scss src/css/mystyles.css",
+		"css-watch": "npm run css-build -- --watch",
+		"compile sass": "npm run css-watch",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/M4C23-JS/techtest.git"
+	},
+	"keywords": [
+		"test"
+	],
+	"author": "macDev",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/M4C23-JS/techtest/issues"
+	},
+	"homepage": "https://github.com/M4C23-JS/techtest#readme",
+	"devDependencies": {
+		"bulma": "^0.9.2",
+		"node-sass": "^6.0.0"
+	},
+	"dependencies": {
+		"express": "^4.17.1"
+	}
 }

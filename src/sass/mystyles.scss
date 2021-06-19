@@ -1,0 +1,447 @@
+@charset "utf-8";
+@import 'node_modules/bulma/sass/elements/button.sass';
+@import 'node_modules/bulma/bulma.sass';
+@font-face {
+	font-family: 'Roboto';
+	src: url('../assets/fonts/Roboto-Black.ttf') format('truetype');
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url('../assets/fonts/Roboto-Light.ttf') format('truetype');
+	font-weight: 300;
+}
+
+$color-primary-black: #001c59;
+$color-primary-black-deep: #00194e;
+$color-primary-red: #df284a;
+$color-primary-red-complentary: #ff4769;
+
+$color-star: #d8fa5c;
+$color-text-h1: #eee;
+$color-text-p: #eee;
+
+$color-text-a: #2fcdeb;
+
+$color-content-qualification: #ff4769;
+
+$font-size-content-title-desktop: 3rem;
+$font-size-content-description-desktop: 1.2rem;
+$font-size-hero-button: 1.225rem;
+
+$svg-width-stars: 20px;
+
+$border-radius-desktop: 8px;
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #ccc;
+}
+
+@mixin font-family-roboto {
+	font-family: 'Roboto', monospace;
+}
+@mixin hero-backbround($url) {
+	background-image: $url;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	@media screen and (max-width: 768px) {
+		background-position: right;
+	}
+}
+@mixin background-hero-content {
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		90deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(0, 28, 89, 1) 31%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	@media screen and (max-width: 768px) {
+		background: linear-gradient(
+			90deg,
+			rgba(2, 0, 36, 1) 0%,
+			rgba(0, 28, 89, 0) 100%
+		);
+	}
+}
+
+@mixin hero-content-layout {
+	margin-left: 0;
+	padding-top: 5%;
+	padding-right: 30%;
+	padding-left: 5%;
+	padding-bottom: 3%;
+}
+
+.section.hero {
+	padding: 0;
+	width: 100%;
+	font-family: 'Roboto', monospace;
+	height: 70%;
+	margin: 0;
+	@include hero-backbround(url('../assets/images/SLIDE_LOGO.jpg'));
+	.content {
+		height: 100%;
+		@include background-hero-content;
+		@include hero-content-layout;
+	}
+	.title.content-title {
+		font-weight: 900;
+		font-size: $font-size-content-title-desktop;
+		color: $color-text-h1;
+		margin-bottom: 25px;
+	}
+	.columns {
+		.column {
+			.content-description {
+				margin-top: 25px;
+				margin-bottom: 25px;
+				font-weight: 400;
+				font-size: $font-size-content-description-desktop;
+				color: $color-text-p;
+			}
+			.content-qualification {
+				.course-number_opinions {
+					margin-left: 15px;
+					color: $color-text-a;
+				}
+				.course-difficult_bar {
+					color: $color-text-p;
+					margin-left: 15px;
+					padding: 8px;
+					border: #777 0.1px solid;
+					border-radius: $border-radius-desktop;
+				}
+			}
+		}
+	}
+
+	.hero_label {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		font-size: 0.9rem;
+		color: #a4b5da;
+		a {
+			color: $color-text-a;
+			&:hover {
+				color: $color-text-a;
+			}
+		}
+	}
+}
+.control {
+	$color1: #7f9ad4;
+	$color2: #eee;
+	$color-button: #ddd;
+	$color-background: #000a20d8;
+	$color-background-button: #df284a;
+	$color-background-button-hover: #ff4164;
+	$width-input-email: 21.5rem;
+
+	height: 2.9rem;
+	font-family: 'Roboto', monospace;
+	input[type='email'],
+	input[type='text'] {
+		font-family: inherit;
+		width: $width-input-email;
+		height: 100%;
+		background-color: $color-background;
+		border-color: $color1;
+		border-radius: $border-radius-desktop;
+		&[value] {
+			color: $color2;
+		}
+		&::placeholder {
+			color: $color1;
+		}
+		&:focus {
+			color: $color2;
+			border-color: #2b6eff;
+			border-width: 3px;
+			&::placeholder {
+				color: $color-background;
+			}
+		}
+	}
+	.hero_button-start_free {
+		font-family: 'Roboto', monospace;
+		height: inherit;
+		background-color: $color-background-button;
+		color: $color-button;
+		font-weight: 700;
+		padding: 0;
+		border: none;
+		border-radius: $border-radius-desktop;
+
+		&:hover {
+			background-color: $color-background-button-hover;
+		}
+		a {
+			color: inherit;
+			padding: 10px 20px;
+		}
+	}
+	.preregistration-button-continue {
+		font-family: 'Roboto', monospace;
+		float: right;
+		height: inherit;
+		background-color: #7f9ad4;
+		color: #183e90;
+		font-weight: 700;
+		padding: 0;
+		border: none;
+		border-radius: $border-radius-desktop;
+
+		&:hover {
+			background-color: $color-background-button-hover;
+		}
+		a {
+			color: inherit;
+			padding: 10px 30px;
+		}
+	}
+}
+
+.header {
+	height: 3rem;
+	width: 70%;
+
+	margin: 0 auto;
+	img {
+		width: 100px;
+		padding-left: 10px;
+		padding-top: 10px;
+		@media screen and (max-width: 768px) {
+			margin: 0 20%;
+		}
+	}
+}
+.c-language-svg {
+	width: 100%;
+	padding: 0;
+}
+.star-svg {
+	width: $svg-width-stars;
+}
+
+// progress
+
+@import './steps-line.scss';
+
+// head-title
+.head-title,
+.foot-title {
+	width: 100%;
+	background-color: #001c59;
+}
+
+.wrapper-info {
+	display: flex;
+	height: auto;
+	width: 70%;
+	&.agreenment {
+		width: 100%;
+		max-width: 722px;
+	}
+	background-color: #001c59;
+	padding: 26px 10px;
+	margin: 0 auto;
+	border-bottom: 1px solid #183e90;
+
+	.col-1 {
+		width: 80px;
+		height: 100%;
+	}
+	.col-2 {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+	}
+	.head-title-svg {
+		width: 48px;
+	}
+	@include font-family-roboto;
+	.title {
+		font-size: 1.5rem;
+		color: $color-text-h1;
+		height: auto;
+		margin-bottom: 5px;
+	}
+	.head-subtitle {
+		color: $color-text-p;
+	}
+}
+
+.preregistration-form {
+	height: auto;
+	background-color: #0c1f47;
+}
+
+.preregistration-label {
+	color: $color-text-p;
+	font-size: 1rem;
+	display: block;
+	width: 100%;
+	margin: 8px 0;
+}
+.preregistration-altlabel {
+	color: #7f9ad4;
+	font-size: 0.875rem;
+	display: block;
+	width: 100%;
+	margin: 0px 0px 8px;
+}
+
+.wrapper {
+	@include font-family-roboto;
+	display: flex;
+	align-content: center;
+	justify-items: center;
+	flex-direction: column;
+	padding-top: 3rem;
+
+	height: auto;
+	.control input[type='email'],
+	.control input[type='text'],
+	[type='email'] {
+		width: 100%;
+	}
+}
+
+.form-section-1,
+.form-section-2 {
+	margin: 0 auto;
+	width: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+}
+.form-section-2 {
+	margin-top: 8px;
+	width: 100%;
+	max-width: 563px;
+}
+.form-section-2-1 {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	height: 128px;
+	width: 100%;
+	background-color: #00194e;
+}
+
+.input-radio-wrapper {
+	display: flex;
+
+	justify-content: left;
+	img {
+		width: 20px;
+		margin-right: 10px;
+	}
+}
+
+.preregistration-light {
+	display: flex;
+	flex-direction: row;
+}
+.preregistration-wraper-checkbox {
+	font-size: 12px;
+	color: #7f9ad4;
+	display: flex;
+	align-items: center;
+	padding: 3px 9px;
+	margin-right: 12.5px;
+	margin-bottom: 24px;
+	width: 8rem;
+	height: 3em;
+	border: 1px solid #7f9ad4;
+	border-radius: 0.5rem;
+	&:hover {
+		border: 1px solid #2fcdeb;
+	}
+}
+
+.preregistration-dark {
+	width: 563px;
+	padding: 20px 10px;
+	margin: 0 auto;
+	.control {
+		width: 20rem;
+		input[type='text'] {
+			background-color: #000a20d8;
+			border-radius: 0 0.5rem 0.5rem 0;
+		}
+		.selects {
+			display: flex;
+			.country-select {
+				color: #eee;
+				width: 5rem;
+				background-color: #000a20d8;
+				border: 1px solid #7f9ad4;
+
+				border-radius: 0.5rem 0 0 0.5rem;
+				:focus {
+					background-color: #000a20d8;
+				}
+			}
+		}
+	}
+}
+.student-trafe-off {
+	color: #7f9ad4;
+	margin-bottom: 24px;
+}
+.foot-title {
+	background-color: #0c1f47;
+	.wrapper-info {
+		width: 100%;
+		max-width: 560px;
+		&.step2 {
+			max-width: 722px;
+		}
+
+		background-color: #0c1f47;
+		border-bottom: #0c1f47;
+		border-top: 1px solid #183e90;
+	}
+	.col-1 {
+		width: 70%;
+		color: #7f9ad4;
+	}
+	.col-2 {
+		width: 30%;
+	}
+	a {
+		color: #2fcdeb;
+	}
+}
+.preregistration-wraper-checkbox.agreenment {
+	font-size: 14px;
+	height: 50px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.preregistration-wraper-checkbox {
+	input[type='radio']:checked + span > img {
+		content: url('/src/assets/images/INPUT_RADIO_ON.svg');
+	}
+	&.agreenment {
+		input[type='checkbox']:checked + span > img {
+			content: url('/src/assets/images/CHECK_BOX_ON.svg');
+		}
+	}
+}

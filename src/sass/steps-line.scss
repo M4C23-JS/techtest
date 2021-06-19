@@ -1,0 +1,66 @@
+.container {
+	max-width: none !important;
+}
+
+.progressbar-steps {
+	background-color: $color-primary-black-deep;
+	height: 104px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.progressbar-wrap {
+	@include font-family-roboto;
+	font-size: 0.8rem;
+	font-weight: 300;
+	height: 60px;
+	width: 55%;
+}
+.progressbar-wrap li {
+	list-style-type: none;
+	width: 25%;
+	float: left;
+	position: relative;
+	text-align: center;
+	color: #7d7d7d;
+}
+.progressbar-wrap li:before {
+	width: 20px;
+	height: 20px;
+	content: '';
+	line-height: 60px;
+	border: 2px solid #7d7d7d;
+	display: block;
+	text-align: center;
+	margin: 0 auto 9px auto;
+	border-radius: 50%;
+	position: relative;
+	z-index: 2;
+	background-color: $color-primary-black-deep;
+	box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 10px #001c59,
+		0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.progressbar-wrap li:after {
+	width: 100%;
+	height: 2px;
+	content: '';
+	position: absolute;
+	background-color: #aaa;
+	top: 10px;
+	left: -50%;
+	z-index: 0;
+}
+.progressbar-wrap li:first-child:after {
+	content: none;
+}
+.progressbar-wrap li.active {
+	color: $color-primary-red-complentary;
+}
+
+.progressbar-wrap li.active:after {
+	background-color: $color-primary-red-complentary;
+}
+.progressbar-wrap li.active:before {
+	border-color: $color-primary-red-complentary;
+}

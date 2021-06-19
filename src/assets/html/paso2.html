@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>My custom Bulma website</title>
+		<link rel="stylesheet" href="../../css/mystyles.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="container">
+				<div class="head-title">
+					<div class="header">
+						<img src="../images/logo-dsrp-blanco.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="progressbar-steps">
+				<ul class="progressbar-wrap">
+					<li class="active">Nombre y Correo</li>
+					<li class="active">Intereses</li>
+					<li>Compromisos</li>
+					<li>Entrar</li>
+				</ul>
+			</div>
+			<div class="container">
+				<div class="head-title">
+					<div class="wrapper-info">
+						<div class="col-1">
+							<img
+								src="../images/HEAD_USER.svg"
+								alt="user head"
+								class="head-title-svg"
+							/>
+						</div>
+						<div class="col-2">
+							<h2 class="title">
+								Estás a unos pasos de adquirir conocimiento para toda la vida
+							</h2>
+							<p class="head-subtitle">
+								Completa tus datos para crear tu cuenta.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<form action="" class="preregistration-form">
+					<div id="wrapper" class="wrapper">
+						<div class="form-section-1">
+							<p class="preregistration-label">Nombre completo</p>
+							<p class="preregistration-altlabel">
+								Así aparecerá en tus certificados
+							</p>
+							<div class="columns">
+								<div class="column">
+									<div class="control">
+										<input
+											class="input"
+											type="text"
+											name="name"
+											placeholder="Nombre(s)"
+											value=""
+										/>
+									</div>
+								</div>
+								<div class="column">
+									<div class="control">
+										<input
+											class="input"
+											type="text"
+											name="lastname"
+											placeholder="Apellido(s)"
+											value=""
+										/>
+									</div>
+								</div>
+							</div>
+							<p class="preregistration-label" hidden>Correo electrónico</p>
+							<p class="preregistration-altlabel">
+								Te enviaremos un email de confirmación para activar tu cuenta si
+								no lo has hecho antes
+							</p>
+							<div class="columns">
+								<div class="column">
+									<div class="control">
+										<input
+											class="input"
+											type="email"
+											name="lastname"
+											placeholder="tunombre@correo.com"
+											value=""
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="formSection2" class="form-section-2">
+							<p class="preregistration-label">¿Tienes WhatsApp?</p>
+							<div id="preregistrationLight" class="preregistration-light">
+								<label id="yes-wa" class="preregistration-wraper-checkbox">
+									<input
+										id="input_yes"
+										name="hasWhatssap"
+										value="Yes"
+										type="radio"
+										style="display: none"
+									/>
+									<span class="input-radio-wrapper">
+										<img
+											id="yes-radio"
+											src="../images/INPUT_RADIO_OFF.svg"
+											alt="input radio customized"
+										/>
+									</span>
+									Sí
+								</label>
+
+								<label id="no-wa" class="preregistration-wraper-checkbox">
+									<input
+										type="radio"
+										name="hasWhatssap"
+										value="No"
+										style="display: none"
+									/>
+									<span class="input-radio-wrapper">
+										<img
+											id="no-radio"
+											src="../images/INPUT_RADIO_OFF.svg"
+											alt="input radio customized"
+										/>
+									</span>
+									No
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="foot-title">
+							<div class="wrapper-info">
+								<div class="col-1">
+									<p>¿Ya tienes una cuenta? <a>Entra aquí</a></p>
+								</div>
+								<div class="col-2">
+									<div class="control">
+										<button class="button preregistration-button-continue">
+											<a href="./paso3.html"> CONTINUAR </a>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/preregistry_input_radio_handler.js"></script>
+</html>
